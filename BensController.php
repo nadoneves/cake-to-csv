@@ -2,6 +2,8 @@ public function excel()
 {
   Configure::write('debug',2);
     $this->autoRender = false;
+    // Deverá haver no servidor de banco uma pasta mapeada do servidor de app
+    // onde será gerado o arquivo .csv a partir do comando INTO OUTFILE do mysql
     $caminhoServidor = "/mnt/nfs/";
     $nomearquivo = "bens".date("dmYHis").".csv";
     $arquivoServidor = $caminhoServidor.$nomearquivo;
